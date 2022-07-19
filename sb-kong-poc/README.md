@@ -30,8 +30,8 @@ Swagger Documentation : http://localhost:8080/swagger-ui/
 - http://localhost:8085/swagger-ui/
 
 ### Contribute
-SWAT Engineering Team (BCBS)
+Ravi (AArs Solutions)
 
 ### License
-@CopyRight ( C ) All rights reserved to BCBS. It's Illegal to reproduce this code.
+@CopyRight ( C ) All rights reserved to AArs Solutions. It's Illegal to reproduce this code.
 [Ravi Reddy](https://www.linkedin.com/in/ravireddy55447/)
