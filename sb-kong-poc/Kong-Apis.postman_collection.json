@@ -1,0 +1,735 @@
+{
+	"info": {
+		"_postman_id": "2ea72bcf-4bb5-4c5c-aa73-c9fd85426965",
+		"name": "Kong-Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TEST-API-Kong-API-Gateway-For-Celsius",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/temperature-v1/celsius/240",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"temperature-v1",
+						"celsius",
+						"240"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-Search",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "ONELOGIN CLIENT SECRET",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "ONELOGIN CLIENT ID",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://api.us.onelogin.com/auth/oauth2/v2/token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/customer-v1/customer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-v1",
+						"customer",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/customer-v1/customer/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-v1",
+						"customer",
+						"3"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-Search-All",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/customer-v1/customer/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-v1",
+						"customer",
+						"all"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"address\": \"8983 E St N, Minneapolis MN 55447\",\r\n  \"id\": 3,\r\n  \"name\": \"Sai Naans\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/customer-v1/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-v1",
+						"customer"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-OAuth-Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client_id\": \"CLIENT_ID_100001\",\r\n  \"client_secret\": \"CLIENT_SECRET_100001\",\r\n  \"grant_type\": \"password\",\r\n  \"provision_key\": \"4SkpYYeEVK4Rlcjypf5VzERR8dkKmzgT\",\r\n  \"authenticated_userid\": \"eobchanges@gmail.com\",\r\n  \"scope\": \"read\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:8443/customer-v1/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"customer-v1",
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"address\": \"5678 St W, Las Vegas NV 88901\",\r\n  \"id\": 2,\r\n  \"name\": \"Jose Maria\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/customer-v1/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-v1",
+						"customer"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TEST-API-Kong-API-Gateway-For-Fahrenheit",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/temperature-v1/fahrenheit/240",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"temperature-v1",
+						"fahrenheit",
+						"240"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kong-Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kong Service - Dynamic Path",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"temperature\",\r\n  \"url\": \"http://172.23.0.5:8085/sbk-service/v1/temperature\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/services/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kong-Service-For-Customer-Api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"customer\",\r\n  \"url\": \"http://172.23.0.5:8085/sbk-service/v1/customer\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/services/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kong Service - Dynamic Route",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"temperature\",\r\n  \"paths\": [\"/temperature-v1\"]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/services/temperature/routes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						"temperature",
+						"routes"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kong-Route-For-Customer-Api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"customer\",\r\n  \"paths\": [\"/customer-v1\"]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8001/services/customer/routes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						"customer",
+						"routes"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer-OAuth-Service-Plugin2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "oauth2",
+							"type": "text"
+						},
+						{
+							"key": "config.scopes",
+							"value": "read",
+							"type": "text"
+						},
+						{
+							"key": "config.scopes",
+							"value": "write",
+							"type": "text"
+						},
+						{
+							"key": "config.mandatory_scope",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "config.enable_password_grant",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "config.accept_http_if_already_terminated",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "config.token_expiration",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "config.global_credentials",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8001/services/customer/plugins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						"customer",
+						"plugins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kong-OAuth-Create-Consumer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "eobchanges@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "custom_id",
+							"value": "100001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8001/consumers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"consumers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kong-Provision-OAuth-Credentials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Kong OAuth",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "CLIENT_ID_100001",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "CLIENT_SECRET_100001",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uris",
+							"value": "http://localhost:8806/tp",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8001/consumers/eobchanges@gmail.com/oauth2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"consumers",
+						"eobchanges@gmail.com",
+						"oauth2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kong-Provision-OAuth-Credentials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8001/consumers/eobchanges@gmail.com/oauth2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"consumers",
+						"eobchanges@gmail.com",
+						"oauth2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
